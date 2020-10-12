@@ -26,13 +26,13 @@ class Game
       player.lose_life
     end
     check_score
-    show_stats
   end
 
   def turn
     while @player1.lives > 0 || @player2.lives > 0 do
       new_question(@player1)
       new_question(@player2)
+      show_stats
       puts ("----- NEW TURN -----")
     end
   end
